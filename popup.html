@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 700px;
+  right: 200px;
+  width: 280px;
+
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 1;
+  right: 600px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: #22A3E4;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: green;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: blue;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 600px) {
+
+
+ .form-popup{
+     width:100%;
+	 height:auto;
+	 bottom: 60px;
+     right: -100px;
+}
+ .open-button {
+  bottom: 1px;
+  right: 1px;
+	width:100%;
+}
+</style>
+</head>
+<body>
+
+<h2>Popup Form</h2>
+<p>Click on the button at the bottom of this page to open the login form.</p>
+<p>Note that the button and the form is fixed - they will always be positioned to the bottom of the browser window.</p>
+
+<button class="open-button" onclick="openForm()">Logg inn</button>
+
+<!--<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Logg inn</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Skriv inn Email" name="email" required>
+
+    <label for="psw"><b>Passord</b></label>
+    <input type="password" placeholder="Skriv inn Passord" name="psw" required>
+
+    <button type="submit" class="btn">Logg in</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Lukk vindu</button>
+  </form>
+</div> -->
+
+<button class="open-button" onclick="openForm()">Registrer</button>
+
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Registrer</h1>
+
+    <label for="email"><b>Skriv inn Epost-adressen</b></label>
+    <input type="text" placeholder="Skriv inn Epost" name="email" required>
+
+    <label for="psw"><b>Skriv inn passord</b></label>
+    <input type="password" placeholder="Skriv inn Passord" name="psw" required>
+	
+	<label for="bpsw"><b>Bekreft passord</b></label>
+    <input type="password" placeholder="Bekreft passordet" name="bpsw" required>
+	
+	<label for="fna"><b>Skriv inn fornavn</b></label>
+    <input type="text" placeholder="Skriv inn fornavn" name="fna" required>
+	
+	<label for="ena"><b>Skriv inn etternavn</b></label>
+    <input type="text" placeholder="Skriv inn etternavn" name="ena" required>
+	
+	<label for="tlf"><b>Skriv inn Telefonnr</b></label>
+    <input type="text" placeholder="Skriv inn Telefonnr" name="tlf" required>
+	
+	<label for="tlf"><b>Kjønn</b></label>
+	<select name="Kjønn">
+    <option value="Mann">Mann</option>
+    <option value="Kvinne">Kvinne</option>
+    <option value="Annen">Annen</option>
+    </select>
+	
+	<label for="tlf"><b>Dato</b></label>
+	<input type="date" name="Fødselsdato">
+	
+
+    <button type="submit" class="btn">Logg in</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Lukk vindu</button>
+  </form>
+</div>
+
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+</body>
+</html>
+
