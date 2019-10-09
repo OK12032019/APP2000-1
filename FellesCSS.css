@@ -117,43 +117,43 @@ a{
 
 
 /* piotr sinn css */
-.hovedfooter {
-    position:static;
-    bottom:5px;
-    padding:5px; 
-    /*Gammel farge: #329c4f*/
-    background-color: #8FBE00;
-    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
-    margin-top:20px;
-    margin-bottom:10px;
-}
-.hovedfooter .lenker_footer{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 150px;
-    margin-right: auto;
-}
-.hovedfooter .copyright{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 150px; 
-}
-.lenker_footer a{
-    margin-right: 10px;
-}
-.hovedinnhold {
-    position: static;
-    margin-top: 100px;
-    margin-left: 200px;
-    margin-right: 200px;
-    margin-bottom: 100px;
-}
-.sideinnhold {
-    position: static;
-    float: right;
-    margin-top: 100px;
-    margin-right: 200px;
-    margin-bottom: 100px;
+@media all {
+  .hovedfooter {
+      position:static;
+      bottom:5px;
+      padding:5px; 
+      /*Gammel farge: #329c4f*/
+      background-color: #8FBE00;
+      box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+      margin-top:20px;
+      margin-bottom:10px;
+      text-align: center;
+  }
+  .hovedfooter .lenker_footer{
+      margin-top: 10px;
+      margin-bottom: 10px;
+  }
+  .hovedfooter .copyright{
+      margin-top: 10px;
+      margin-bottom: 10px; 
+  }
+  .lenker_footer a{
+      margin-right: 10px;
+  }
+  .hovedinnhold {
+      position: static;
+      margin-top: 100px;
+      margin-left: 40%;
+      margin-right: 50px;
+      margin-bottom: 100px;
+  }
+  .sideinnhold {
+      position: static;
+      float: right;
+      margin-top: 100px;
+      margin-right: 200px;
+      margin-bottom: 100px;
+  }
 }
 
 /* øyvind css
